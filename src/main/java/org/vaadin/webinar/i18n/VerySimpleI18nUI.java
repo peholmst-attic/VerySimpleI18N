@@ -20,7 +20,7 @@ public class VerySimpleI18nUI extends UI {
     protected void init(VaadinRequest vaadinRequest) {
         MainView mainView = new MainView();
         setContent(mainView);
-        setLocale(vaadinRequest.getLocale());
+        setLocale(getPage().getWebBrowser().getLocale());
     }
 
     @Override

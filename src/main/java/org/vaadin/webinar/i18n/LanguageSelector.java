@@ -19,14 +19,9 @@ public class LanguageSelector extends ComboBox implements Translatable {
     }
 
     @Override
-    public void attach() {
-        super.attach();
-        setValue(getUI().getLocale());
-    }
-
-    @Override
     public void updateMessageStrings() {
         Messages messages = Messages.getInstance();
+        setValue(getLocale());
         setItemCaption(Locale.ENGLISH, messages.getMessage("languageSelector.en"));
         setItemCaption(SWEDISH, messages.getMessage("languageSelector.sv"));
         setItemCaption(FINNISH, messages.getMessage("languageSelector.fi"));
